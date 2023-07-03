@@ -1,1 +1,1 @@
-# Business-card-generator-frontend
+# Frontend(React.js) for the business card generator.
