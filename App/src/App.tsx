@@ -8,16 +8,25 @@ function App() {
 
   return (
     <>
-       <div>
+    <div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Log In</a></li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
+      </nav>
+
       <header>
         <h1>Business Card Generator</h1>
         <h2>Lorem ipsum</h2>
       </header>
 
       <div>
-        <button>Login</button>
-        <button>Sign In</button>
+        <button>Log In</button>
+        <button>Sign Up</button>
       </div>
+
     </div>
     </>
   )
