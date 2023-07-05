@@ -6,7 +6,6 @@
     margin-right: auto;
     width: 40%
 }
-
 .input[type="email"]{
     width: 300px;
     padding: 10px;
@@ -15,13 +14,10 @@
     font-size: 16px;
     margin-bottom: 10px;
 }
-
 .preview {
     max-width: 200px;
     align-items: center
 }
-
-
 .form{
   position: absolute;
   top: 50%;
@@ -70,8 +66,3 @@
 .form button:active{
   border:0;
 }
-
-
-
-
-  
