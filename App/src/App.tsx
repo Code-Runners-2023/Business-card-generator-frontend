@@ -4,6 +4,7 @@ import { Login } from './components/Login'
 import { Signup } from './components/Signup'
 import { CardGenerator } from './components/CardGenerator'
 import { Profile } from './components/Profile'
+import  ImagePreview  from './components/ImagePreview'
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
               <Route path='signup' element={<Signup />} />
               <Route path='generate' element={<CardGenerator />} />
               <Route path='profile' element={<Profile />} />
+              <Route path='preview' element={<ImagePreview />} />
             </Routes>
         </BrowserRouter>
       </div>
