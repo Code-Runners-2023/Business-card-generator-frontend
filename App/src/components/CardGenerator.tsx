@@ -4,12 +4,18 @@ import '../styles/Main.css'
 import { ImageUpload } from './ImageUpload'
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState, ChangeEvent } from 'react'
+import styles from '../styles/Card.module.css'
 
 export const CardGenerator = () => {
-    const isLoggedIn = false;
+    const isLoggedIn = true;
     const [companyName, setCompanyName] = useState('');
     const [address, setAddress] = useState('');
-    const [position, setPosition] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [mobileNumber, setMobileNumber] = useState('');
+    const [website, setWebsite] = useState('');
+    const [email, setEmail] = useState('');
+
     const [generatedContent, setGeneratedContent] = useState<JSX.Element | null>(null);
   
     const handleCompanyNameChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -20,21 +26,45 @@ export const CardGenerator = () => {
         setAddress(e.target.value);
     };
   
-    const handlePositionChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setPosition(e.target.value);
+    const handleFirstNameChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setFirstName(e.target.value);
+    };
+
+    const handleLastNameChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setLastName(e.target.value);
+    };
+
+    const handleMobileNumberChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setMobileNumber(e.target.value);
+    };
+
+    const handleWebsiteChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setWebsite(e.target.value);
+    };
+
+    const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setEmail(e.target.value);
     };
   
     const handleGenerate = () => {
-        console.log('Company Name:', companyName);
-        console.log('Address:', address);
-        console.log('Position:', position);
-    
         const generatedElements = (
-            <div>
-                <p>{companyName}</p>
-                <p>{address}</p>
-                <p>{position}</p>
+            <>
+            <div className={styles.front}>
+                <div className={styles.personalintro}>
+                    <p>{companyName}</p>
+                    <p>{address}</p>
+                </div>
             </div>
+            
+            <div className={styles.back}>
+                <div className={styles.personalinfo}>
+                    <p>{firstName} {lastName}</p>
+                    <p>{mobileNumber}</p>
+                    <p>{website}, {email}</p>
+                    <p>{address}</p>
+                </div>
+            </div>
+            </>
         );
 
         setGeneratedContent(generatedElements);
@@ -46,9 +76,13 @@ export const CardGenerator = () => {
             <div>
                 <h1>Generate a Card</h1>
                 <div className="container">
+                    <input type="email" placeholder="First name" value={firstName} onChange={handleFirstNameChange}/>
+                    <input type="email" placeholder="Last name" value={lastName} onChange={handleLastNameChange}/>
+                    <input type="email" placeholder="Mobile phone" value={mobileNumber} onChange={handleMobileNumberChange}/>
+                    <input type="email" placeholder="Email address" value={email} onChange={handleEmailChange}/>
+                    <input type="email" placeholder="Website" value={website} onChange={handleWebsiteChange}/>
                     <input type="email" placeholder="Company name" value={companyName} onChange={handleCompanyNameChange}/>
                     <input type="email" placeholder="Address" value={address} onChange={handleAddressChange}/>
-                    <input type="email" placeholder="Position" value={position} onChange={handlePositionChange}/>
                     <h3>Upload a Logo</h3>
                     <ImageUpload />
                     <button onClick={handleGenerate}>Generate</button>
