@@ -44,7 +44,7 @@ const ImagePreview: React.FC = () => {
           )}
           {isImageVisible && !isButtonVisible && (
             <div style={{ marginTop: '20px' }}>
-            <button onClick={handleSecondButtonClick}>New Button</button>
+            <button onClick={handleSecondButtonClick}>Get Card</button>
             </div>
           )}
         </div>
