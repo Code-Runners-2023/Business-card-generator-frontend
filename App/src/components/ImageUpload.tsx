@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import UploadService from "../services/FileUploadService"
 import IFile from "../types/IFile"
-import "../styles/ImageUpload.css"
 
 export const ImageUpload = () =>{
 

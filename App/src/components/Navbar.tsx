@@ -9,7 +9,7 @@ export const Navbar = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
             {isLoggedIn ? null : <Link to="/login">Log In</Link>}
             {isLoggedIn ? null : <Link to="/signup">Sign Up</Link>}
             <Link to="/generate">Generate a card</Link>
-            {isLoggedIn ? <Link to="/settings">Settings</Link> : null}
+            {isLoggedIn ? <Link to="/profile">Profile</Link> : null}
         </nav>
     )
 }
