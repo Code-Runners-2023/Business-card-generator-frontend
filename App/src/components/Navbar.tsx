@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom'
 import  '../styles/Navbar.css'
 import '../styles/Main.css'
 
-export const Navbar = () => {
+export const Navbar = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
     return (
         <nav>
             <Link to="/">Home</Link>
-            <Link to="/login">Log In</Link>
-            <Link to="/signup">Sign Up</Link>
+            {isLoggedIn ? null : <Link to="/login">Log In</Link>}
+            {isLoggedIn ? null : <Link to="/signup">Sign Up</Link>}
             <Link to="/generate">Generate a card</Link>
         </nav>
     )

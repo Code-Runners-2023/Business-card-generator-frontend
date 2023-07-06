@@ -6,7 +6,7 @@ import '../styles/Signup.css'
 export const Signup = () => {
     return (
         <>
-        <Navbar />
+        <Navbar isLoggedIn={false}/>
             <div>
                 <h1>Sign Up</h1>
                 <div className="container">

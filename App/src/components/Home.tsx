@@ -4,9 +4,11 @@ import '../styles/Home.css'
 
 import image from '../assets/card_sample.jpg'
 export const Home = () => {
+    const isLoggedIn = false;
+
     return (
         <>
-        <Navbar />
+        <Navbar isLoggedIn={isLoggedIn}/>
             <div>
                 <h1>Business Card Generation</h1>
                 <h2>Our Business Card Generator provides you with the tools to <br></br>

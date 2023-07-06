@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import '../styles/Main.css'
 import '../styles/Login.css'
 
-export const Login = () => {
+export const Login = () => {    
     return (
         <>
-        <Navbar />
+        <Navbar isLoggedIn={false}/>
             <div>
                 <h1>Login</h1>
                 <div className="container">

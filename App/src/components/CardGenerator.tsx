@@ -4,12 +4,12 @@ import '../styles/Main.css'
 import { ImageUpload } from './ImageUpload'
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export const CardGenerator = () => 
-{
-  
+export const CardGenerator = () => {
+    const isLoggedIn = false;
+
     return (
         <>
-        <Navbar />
+        <Navbar isLoggedIn={isLoggedIn}/>
             <div>
                 <h1>Generate a Card</h1>
                 <div className="container">
