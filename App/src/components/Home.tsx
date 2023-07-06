@@ -4,7 +4,7 @@ import '../styles/Home.css'
 
 import image from '../assets/card_sample.jpg'
 export const Home = () => {
-    const isLoggedIn = true;
+    const isLoggedIn = false;
 
     return (
         <>

@@ -17,6 +17,7 @@ export const Signup = () => {
                     <input type="password" placeholder="Password"/>
                     <input type="password" placeholder="Confrim Password"/>
                     <Link to="/login">Already have an account?</Link>
+                    <button >Log in</button>
                 </div>
             </div>
         </>
