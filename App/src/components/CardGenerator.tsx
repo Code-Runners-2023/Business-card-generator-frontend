@@ -15,6 +15,7 @@ export const CardGenerator = () => {
     const [mobileNumber, setMobileNumber] = useState('');
     const [website, setWebsite] = useState('');
     const [email, setEmail] = useState('');
+    const [position, setPosition] = useState('');
 
     const [generatedContent, setGeneratedContent] = useState<JSX.Element | null>(null);
   
@@ -45,6 +46,10 @@ export const CardGenerator = () => {
     const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value);
     };
+
+    const handlePositionChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setPosition(e.target.value);
+    };
   
     const handleGenerate = () => {
         const generatedElements = ( 
@@ -58,10 +63,11 @@ export const CardGenerator = () => {
             
             <div className={styles.back}>
                 <div className={styles.personalinfo}>
-                    <p>{firstName} {lastName}</p>
-                    <p>{mobileNumber}</p>
-                    <p>{website}, {email}</p>
-                    <p>{address}</p>
+                    <p className={styles.names}>{firstName} {lastName}</p>
+                    <p className={styles.position}>{position}</p>
+                    <p className={styles.position}>{mobileNumber}</p>
+                    <p className={styles.position}>{email}</p>
+                    <p className={styles.company}>{companyName} | {address}</p>
                 </div>
             </div>
             </>
@@ -78,6 +84,7 @@ export const CardGenerator = () => {
                 <div className="container">
                     <input type="email" placeholder="First name" value={firstName} onChange={handleFirstNameChange}/>
                     <input type="email" placeholder="Last name" value={lastName} onChange={handleLastNameChange}/>
+                    <input type="email" placeholder="Position" value={position} onChange={handlePositionChange}/>
                     <input type="email" placeholder="Mobile phone" value={mobileNumber} onChange={handleMobileNumberChange}/>
                     <input type="email" placeholder="Email address" value={email} onChange={handleEmailChange}/>
                     <input type="email" placeholder="Website" value={website} onChange={handleWebsiteChange}/>
