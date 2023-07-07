@@ -1,6 +1,5 @@
 import { Navbar } from './Navbar'
 import '../styles/CardGenerator.css'
-import '../styles/Main.css'
 import { ImageUpload } from './ImageUpload'
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState, ChangeEvent } from 'react'
@@ -60,7 +59,7 @@ export const CardGenerator = () => {
                     <p>{address}</p>
                 </div>
             </div>
-            
+            <br />
             <div className={styles.back}>
                 <div className={styles.personalinfo}>
                     <p className={styles.names}>{firstName} {lastName}</p>
@@ -81,8 +80,8 @@ export const CardGenerator = () => {
         <Navbar isLoggedIn={isLoggedIn}/>
             <div>
                 <h1>Generate a Card</h1>
-                <div className="container">
-                    <input type="email" placeholder="First name" value={firstName} onChange={handleFirstNameChange}/>
+                <div className="card-generator-form">
+                <input type="email" placeholder="First name" value={firstName} onChange={handleFirstNameChange}/>
                     <input type="email" placeholder="Last name" value={lastName} onChange={handleLastNameChange}/>
                     <input type="email" placeholder="Position" value={position} onChange={handlePositionChange}/>
                     <input type="email" placeholder="Mobile phone" value={mobileNumber} onChange={handleMobileNumberChange}/>
@@ -90,10 +89,13 @@ export const CardGenerator = () => {
                     <input type="email" placeholder="Website" value={website} onChange={handleWebsiteChange}/>
                     <input type="email" placeholder="Company name" value={companyName} onChange={handleCompanyNameChange}/>
                     <input type="email" placeholder="Address" value={address} onChange={handleAddressChange}/>
-                    <h3>Upload a Logo</h3>
-                    <ImageUpload />
                     <button onClick={handleGenerate}>Generate</button>
                 </div>
+                {/* <div className="container">
+                    <h3>Upload a Logo</h3>
+                    <ImageUpload />
+                </div> */}
+
             </div>
             <div>{generatedContent}</div>
         </>

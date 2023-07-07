@@ -6,7 +6,6 @@ import { CardGenerator } from './components/CardGenerator'
 import ImagePreview from './components/ImagePreview'
 import NumberInputContainer from './components/NumberInputContainer'
 import { Profile } from './components/Profile'
-import  ImagePreview  from './components/ImagePreview'
 
 function App() {
     return (
