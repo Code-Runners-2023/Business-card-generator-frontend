@@ -1,6 +1,5 @@
 import { Navbar } from './Navbar'
 import '../styles/CardGenerator.css'
-import '../styles/Main.css'
 import { ImageUpload } from './ImageUpload'
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState, ChangeEvent } from 'react'
@@ -15,6 +14,7 @@ export const CardGenerator = () => {
     const [mobileNumber, setMobileNumber] = useState('');
     const [website, setWebsite] = useState('');
     const [email, setEmail] = useState('');
+    const [position, setPosition] = useState('');
 
     const [generatedContent, setGeneratedContent] = useState<JSX.Element | null>(null);
   
@@ -45,6 +45,10 @@ export const CardGenerator = () => {
     const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value);
     };
+
+    const handlePositionChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setPosition(e.target.value);
+    };
   
     const handleGenerate = () => {
         const generatedElements = ( 
@@ -55,13 +59,14 @@ export const CardGenerator = () => {
                     <p>{address}</p>
                 </div>
             </div>
-            
+            <br />
             <div className={styles.back}>
                 <div className={styles.personalinfo}>
-                    <p>{firstName} {lastName}</p>
-                    <p>{mobileNumber}</p>
-                    <p>{website}, {email}</p>
-                    <p>{address}</p>
+                    <p className={styles.names}>{firstName} {lastName}</p>
+                    <p className={styles.position}>{position}</p>
+                    <p className={styles.position}>{mobileNumber}</p>
+                    <p className={styles.position}>{email}</p>
+                    <p className={styles.company}>{companyName} | {address}</p>
                 </div>
             </div>
             </>
@@ -75,18 +80,22 @@ export const CardGenerator = () => {
         <Navbar isLoggedIn={isLoggedIn}/>
             <div>
                 <h1>Generate a Card</h1>
-                <div className="container">
-                    <input type="email" placeholder="First name" value={firstName} onChange={handleFirstNameChange}/>
+                <div className="card-generator-form">
+                <input type="email" placeholder="First name" value={firstName} onChange={handleFirstNameChange}/>
                     <input type="email" placeholder="Last name" value={lastName} onChange={handleLastNameChange}/>
+                    <input type="email" placeholder="Position" value={position} onChange={handlePositionChange}/>
                     <input type="email" placeholder="Mobile phone" value={mobileNumber} onChange={handleMobileNumberChange}/>
                     <input type="email" placeholder="Email address" value={email} onChange={handleEmailChange}/>
                     <input type="email" placeholder="Website" value={website} onChange={handleWebsiteChange}/>
                     <input type="email" placeholder="Company name" value={companyName} onChange={handleCompanyNameChange}/>
                     <input type="email" placeholder="Address" value={address} onChange={handleAddressChange}/>
-                    <h3>Upload a Logo</h3>
-                    <ImageUpload />
                     <button onClick={handleGenerate}>Generate</button>
                 </div>
+                {/* <div className="container">
+                    <h3>Upload a Logo</h3>
+                    <ImageUpload />
+                </div> */}
+
             </div>
             <div>{generatedContent}</div>
         </>
