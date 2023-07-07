@@ -3,14 +3,10 @@ import { Home } from './components/Home'
 import { Login } from './components/Login'
 import { Signup } from './components/Signup'
 import { CardGenerator } from './components/CardGenerator'
-<<<<<<< HEAD
 import ImagePreview from './components/ImagePreview'
 import NumberInputContainer from './components/NumberInputContainer'
-
-=======
 import { Profile } from './components/Profile'
 import  ImagePreview  from './components/ImagePreview'
->>>>>>> b1fe8a320793c468d6e261aca43324a037bc4536
 
 function App() {
     return (
