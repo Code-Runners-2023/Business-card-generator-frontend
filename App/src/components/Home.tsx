@@ -1,10 +1,9 @@
 import { Navbar } from './Navbar'
 import '../styles/Main.css'
 import '../styles/Home.css'
-
-import image from '../assets/card_sample.jpg'
+import image from '../assets/image.png'
 export const Home = () => {
-    const isLoggedIn = true;
+    const isLoggedIn = false;
 
     return (
         <>

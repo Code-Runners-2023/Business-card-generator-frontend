@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Navbar } from './Navbar';
 
 const ImagePreview: React.FC = () => {
     const [isImageVisible, setImageVisible] = useState(false);
@@ -14,7 +15,12 @@ const ImagePreview: React.FC = () => {
         setButtonVisible(true);
     };
 
+    const isLoggedIn = true;
+
     return (
+      <>
+        <Navbar isLoggedIn={isLoggedIn}/>
+
         <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         {!isImageVisible && (
             <button onClick={handleButtonClick}>Show Image</button>
@@ -48,6 +54,7 @@ const ImagePreview: React.FC = () => {
             </div>
           )}
         </div>
+      </>
     );
   
 };

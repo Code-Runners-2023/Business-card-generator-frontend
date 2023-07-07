@@ -13,6 +13,7 @@ export const Login = () => {
                     <input type="email" placeholder="Email"/>
                     <input type="password" placeholder="Password"/>
                     <Link to="/signup">Don't have an account?</Link>
+                    <button >Log in</button>
                 </div>
             </div>
         </>
