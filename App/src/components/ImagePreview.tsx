@@ -7,12 +7,13 @@ const ImagePreview: React.FC = () => {
     const [isBlurred, setBlurred] = useState(true); 
 
     const handleButtonClick = () => {
-        setImageVisible(true);
+        setImageVisible(true); 
+
     };
 
     const handleSecondButtonClick = () => {
-        setBlurred(false);
-        setButtonVisible(true);
+        //setBlurred(false);
+        //setButtonVisible(true);
     };
 
     const isLoggedIn = true;
