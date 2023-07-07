@@ -4,6 +4,7 @@ import { Login } from './components/Login'
 import { Signup } from './components/Signup'
 import { CardGenerator } from './components/CardGenerator'
 import ImagePreview from './components/ImagePreview'
+import NumberInputContainer from './components/NumberInputContainer'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
               <Route path='signup' element={<Signup />} />
               <Route path='generate' element={<CardGenerator />} />
               <Route path='preview' element={<ImagePreview />} />
+              <Route path='auth' element={<NumberInputContainer />} />
             </Routes>
         </BrowserRouter>
       </div>
