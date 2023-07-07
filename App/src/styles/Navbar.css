@@ -1,18 +1,18 @@
 nav {
+    color: gray;
     display: left;
     justify-content: center;
-    background-color: #FFFFFF;
     padding: 10px;
 }
 
 nav a {
     margin: 0 10px;
     text-decoration: none;
-    color: #2F394D;
+    color: black;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #3FA7D6;
+    color: #FF9A5C;
 }

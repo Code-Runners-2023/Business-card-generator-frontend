@@ -7,7 +7,7 @@ import React, { useState, ChangeEvent } from 'react'
 import styles from '../styles/Card.module.css'
 
 export const CardGenerator = () => {
-    const isLoggedIn = true;
+    const isLoggedIn = false;
     const [companyName, setCompanyName] = useState('');
     const [address, setAddress] = useState('');
     const [firstName, setFirstName] = useState('');

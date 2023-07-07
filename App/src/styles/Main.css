@@ -1,7 +1,7 @@
 h1 {
     text-align: center;
     font-size: 64px;
-    color: #032B3A;
+    color: black;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
 }
@@ -10,7 +10,7 @@ button {
     width: 300px;
     padding: 10px;
     border: 1px solid #ccc;
-    background-color: #3FA7D8;
+    background-color: #FF9A5C;
     color: #ffffff;
     border-radius: 4px;
     font-size: 16px;
