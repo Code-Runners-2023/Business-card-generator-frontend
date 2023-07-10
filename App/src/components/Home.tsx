@@ -3,7 +3,7 @@ import '../styles/Main.css'
 import '../styles/Home.css'
 import image from '../assets/image.png'
 export const Home = () => {
-    const isLoggedIn = true;
+    const isLoggedIn = false;
 
     return (
         <>
