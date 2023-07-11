@@ -1,4 +1,4 @@
-import { Navbar } from './Navbar'
+import { Navbar } from './Navbar.tsx'
 import { Link } from 'react-router-dom'
 import '../styles/Main.css'
 import '../styles/Signup.css'
@@ -20,10 +20,13 @@ async function SignupHandle (event: React.MouseEvent<HTMLButtonElement>) {
     const confpassValue = confpassInput?.value;
 
     // has to be checked if passwordValue and confpassValue are equal else show message
-
-    const response = await register(fnameValue, lnameValue, phoneValue, emailValue, passwordValue);
-
-    console.log(response);
+    if(passwordValue === confpassValue){
+        const response = await register(fnameValue, lnameValue, phoneValue, emailValue, passwordValue);
+        console.log(response);
+    } else {
+        window.alert("Passwords don't match!")
+    }
+    
 };
 
 export const Signup = () => {
