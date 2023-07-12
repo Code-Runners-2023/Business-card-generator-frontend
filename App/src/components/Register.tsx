@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import '../styles/Main.css'
 import '../styles/Signup.css'
 import { register } from '../api/RegisterRequest.ts'
+import NumberInputContainer from './NumberInputContainer.tsx'
 
 async function SignupHandle (event: React.MouseEvent<HTMLButtonElement>) {
     const fnameInput = document.getElementById("fname") as HTMLInputElement;
@@ -23,10 +24,10 @@ async function SignupHandle (event: React.MouseEvent<HTMLButtonElement>) {
     if(passwordValue === confpassValue){
         const response = await register(fnameValue, lnameValue, phoneValue, emailValue, passwordValue);
         console.log(response);
+        <NumberInputContainer />
     } else {
         window.alert("Passwords don't match!")
     }
-    
 };
 
 export const Signup = () => {
