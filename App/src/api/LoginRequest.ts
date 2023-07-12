@@ -1,10 +1,8 @@
 import bcrypt from 'bcryptjs'
-const url = 'https://localhost:44376/users/login';
 
-export async function login(email: string, password: string): Promise<any> {
+export async function login(email: string, password: string) {
     const hashedPassword = await bcrypt.hash(password, 1);
-    console.log(hashedPassword);
-
+    const url = 'https://localhost:44376/users/login';
     return fetch(url, {
         mode: 'cors',
         method: 'POST',
@@ -15,7 +13,17 @@ export async function login(email: string, password: string): Promise<any> {
         body: JSON.stringify({
             email: email,
             password: <string>hashedPassword,
+            // password: password,
         })
     })
-    .then(response => response.json());
+    .then(response => saveIntoSessionStorage(response));
+}
+
+export async function saveIntoSessionStorage(resp: Response){
+    console.log(resp);
+    const respJson = await resp.json();
+    console.log(respJson)
+    sessionStorage.setItem("itemId", respJson.id);
+    sessionStorage.setItem("itemToken", respJson.jwtToken);
+    console.log(respJson.jwtToken);
 }

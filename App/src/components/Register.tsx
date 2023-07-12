@@ -20,10 +20,10 @@ async function SignupHandle (event: React.MouseEvent<HTMLButtonElement>) {
     const passwordValue = passwordInput?.value;
     const confpassValue = confpassInput?.value;
 
+
     // has to be checked if passwordValue and confpassValue are equal else show message
     if(passwordValue === confpassValue){
         const response = await register(fnameValue, lnameValue, phoneValue, emailValue, passwordValue);
-        console.log(response);
         <NumberInputContainer />
     } else {
         window.alert("Passwords don't match!")

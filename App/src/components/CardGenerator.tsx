@@ -52,7 +52,7 @@ export const CardGenerator = () => {
     
     function getFrontHandle(event: React.MouseEvent<HTMLButtonElement>){
         getImage('front');
-    };
+    }
 
     function getBackHandle(event: React.MouseEvent<HTMLButtonElement>){
         getImage('back');
