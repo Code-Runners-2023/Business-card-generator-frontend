@@ -1,7 +1,8 @@
-import bcrypt from 'bcryptjs'
+import * as CryptoJS from "crypto-js";
 
 export async function login(email: string, password: string) {
-    const hashedPassword = await bcrypt.hash(password, 1);
+    const hashedPassword = CryptoJS.SHA256(password).toString();
+    console.log(hashedPassword);
     const url = 'https://localhost:44376/users/login';
     return fetch(url, {
         mode: 'cors',
@@ -12,8 +13,7 @@ export async function login(email: string, password: string) {
         },
         body: JSON.stringify({
             email: email,
-            password: <string>hashedPassword,
-            // password: password,
+            password: hashedPassword,
         })
     })
     .then(response => saveIntoSessionStorage(response));

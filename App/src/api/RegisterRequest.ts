@@ -1,10 +1,9 @@
-import bcrypt from 'bcryptjs'
 const url = 'https://localhost:44376/users/register';
+import * as CryptoJS from 'crypto-js'
 
 export async function register(firstName: string, lastName: string, phone: string, email: string, password: string){
-    const hashedPassword = await bcrypt.hash(password, 1);
+    const hashedPassword = CryptoJS.SHA256(password).toString();
     console.log(hashedPassword);
-
     return fetch(url, {
         mode: 'cors',
         method: 'POST',
