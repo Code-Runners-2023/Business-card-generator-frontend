@@ -10,6 +10,7 @@ import NumberInputContainer from './components/NumberInputContainer'
 import { Profile } from './components/Profile'
 import  ImagePreview  from './components/ImagePreview'
 import PaymentForm from './components/PaymentForm'
+import ImageUploadPage from './components/ImageUploadPage'
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
               <Route path='preview' element={<ImagePreview />} />
               <Route path='auth' element={<NumberInputContainer />} />
               <Route path='payment' element={<PaymentForm />} />
+              <Route path='upload' element={<ImageUploadPage />} />
             </Routes>
         </BrowserRouter>
       </div>
