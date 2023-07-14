@@ -1,4 +1,4 @@
-export async function profileChange(firstName: string, lastName: string, phone: string, email: string, password: string) {
+export async function profileChange(firstName: string, lastName: string, phone: string, email: string) {
     // if (sessionStorage.getItem("itemId") == null) {
     //     return response.status(403).json("Password Incorrect");
     // }
@@ -16,7 +16,6 @@ export async function profileChange(firstName: string, lastName: string, phone: 
             lastName: lastName,
             email: email,
             phone: phone,
-            password: password
         })
     }).then(response => receiveResponse(response));
 }

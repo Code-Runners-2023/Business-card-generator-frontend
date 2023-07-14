@@ -10,7 +10,6 @@ export const Profile = () => {
     const [lastName, setLastName] = useState('');
     const [mobileNumber, setMobileNumber] = useState('');
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
     const [state, setState] = useState(false);
     
     const handleFirstNameChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -29,10 +28,6 @@ export const Profile = () => {
         setEmail(e.target.value);
         setState(true)
     };
-    const handlePasswordChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setEmail(e.target.value);
-        setState(true)
-    };
 
     const onSubmit = async () => {
         const fnameInput = document.getElementById("fname") as HTMLInputElement;
@@ -44,7 +39,7 @@ export const Profile = () => {
         const lnameValue = lnameInput?.value;
         const phoneValue = phoneInput?.value;
         const emailValue = emailInput?.value;
-        profileChange(fnameValue, lnameValue, phoneValue, emailValue, password);
+        profileChange(fnameValue, lnameValue, phoneValue, emailValue);
     }
 
     const fetchUserData = async () => {
@@ -54,8 +49,6 @@ export const Profile = () => {
         setLastName(response.lastName);
         setMobileNumber(response.phone);
         setEmail(response.email);
-        setPassword(response.password);
-        console.log(password)
     };
 
     useEffect(() => {
