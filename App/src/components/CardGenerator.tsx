@@ -77,8 +77,8 @@ export const CardGenerator = () => {
                 <div className="card">
                     <div className='front'>
                         <div className={styles.personalintro}>
-                            <p>{companyName}</p>
-                            <p>{website}</p>
+                            <p className={styles.companyfront}>{companyName}</p>
+                            <p className={styles.website}>{website}</p>
                         </div>
                     </div>
                     <br />
