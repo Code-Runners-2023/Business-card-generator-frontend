@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ImageUploadPage: React.FC = () => {
+const ImageUploadPage = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <input type="file" id="input_file" style={{ marginBottom: '10px' }} />
