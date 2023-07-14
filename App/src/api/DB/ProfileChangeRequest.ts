@@ -18,5 +18,9 @@ export async function profileChange(firstName: string, lastName: string, phone: 
             phone: phone,
             password: password
         })
-    }).then(response => response.json());
+    }).then(response => receiveResponse(response));
+}
+
+export async function receiveResponse(resp: Response){
+    console.log(resp)
 }
