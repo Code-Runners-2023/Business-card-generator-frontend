@@ -7,7 +7,7 @@ export const Home = () => {
 
     return (
         <>
-        <Navbar isLoggedIn={isLoggedIn}/>
+        <Navbar/>
             <div>
                 <h1>Business Card Generation</h1>
                 <h2>Our Business Card Generator provides you with the tools to <br></br>

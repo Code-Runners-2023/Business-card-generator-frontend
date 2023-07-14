@@ -2,13 +2,10 @@ import { Navbar } from './Navbar'
 import "../styles/Profile.css"
 import '../styles/Main.css'
 import { useState, ChangeEvent, useEffect } from 'react'
-import { profile } from "../api/ProfileRequest.ts";
-import {profileChange} from "../api/ProfileChangeRequest.ts";
-
-
+import { profile } from "../api/DB/ProfileRequest.ts";
+import {profileChange} from "../api/DB/ProfileChangeRequest.ts";
 
 export const Profile = () => {
-    const isLoggedIn = true;
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [mobileNumber, setMobileNumber] = useState('');
@@ -67,7 +64,7 @@ export const Profile = () => {
 
     return (
         <>
-            <Navbar isLoggedIn={isLoggedIn}/>
+            <Navbar />
             <div>
                 <h1>Profile</h1>
                 <div className="container">

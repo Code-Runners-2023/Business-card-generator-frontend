@@ -60,7 +60,7 @@ export const CardGenerator = () => {
 
     return (
         <>
-        <Navbar isLoggedIn={isLoggedIn}/>
+        <Navbar />
             <div>
                 <h1>Generate a Card</h1>
                 <div className="card-generator-form">

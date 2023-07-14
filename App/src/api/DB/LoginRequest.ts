@@ -10,7 +10,7 @@ export async function login(email: string, password: string) {
         headers: {
             'accept': '*',
             'Content-Type': 'application/json',
-        },
+            'Access-Control-Allow-Origin':'*'     },
         body: JSON.stringify({
             email: email,
             password: hashedPassword,

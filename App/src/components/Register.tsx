@@ -2,7 +2,7 @@ import { Navbar } from './Navbar.tsx'
 import { Link } from 'react-router-dom'
 import '../styles/Main.css'
 import '../styles/Signup.css'
-import { register } from '../api/RegisterRequest.ts'
+import { register } from '../api/DB/RegisterRequest.ts'
 import NumberInputContainer from './NumberInputContainer.tsx'
 
 async function SignupHandle (event: React.MouseEvent<HTMLButtonElement>) {
@@ -33,7 +33,7 @@ async function SignupHandle (event: React.MouseEvent<HTMLButtonElement>) {
 export const Signup = () => {
     return (
         <>
-        <Navbar isLoggedIn={false}/>
+        <Navbar />
             <div>
                 <h1>Sign Up</h1>
                 <div className="container">

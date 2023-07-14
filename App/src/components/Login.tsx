@@ -2,7 +2,9 @@ import { Navbar } from './Navbar'
 import { Link } from 'react-router-dom'
 import '../styles/Main.css'
 import '../styles/Login.css'
-import { login } from '../api/LoginRequest.ts'
+import { login } from '../api/DB/LoginRequest.ts'
+
+
 async function LoginHandle () {
     const emailInput = document.getElementById("email") as HTMLInputElement;
     const passwordInput = document.getElementById("password") as HTMLInputElement;
@@ -18,7 +20,7 @@ async function LoginHandle () {
 export const Login = () => {    
     return (
         <>
-        <Navbar isLoggedIn={false}/>
+        <Navbar />
             <div>
                 <h1>Login</h1>
                 <div className="container">
